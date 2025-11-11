@@ -5,6 +5,7 @@ print("[1] Hoeveel is x% van y?")
 print("[2] Hoeveel % is x van y")
 print("[3] x neemt toe met y%; hoeveel heb je nu?")
 print("[4] x neemt af met y%; hoeveel heb je nu?")
+print("[5] x neemt af met y%; hoeveel heb je nu?")
 choice = input("Welke optie kies je?")
 match choice:
     case "1":
@@ -31,5 +32,17 @@ match choice:
         x = float(input("Wat is x?"))
         y = float(input("Wat is y?"))
         answer = (1,00 - x) * y
+        print(f"De vraag is: hoeveel neemt {x} af met {y}?")
+        print(f"Het antwoord is: {answer}")
+    case "5":
+        x = float(input("Wat is x? Hoogste bedrag"))
+        y = float(input("Wat is y? Laagste bedrag"))
+        answer = (x : y)
+        print(f"De vraag is: hoeveel neemt {x} af met {y}?")
+        print(f"Het antwoord is: {answer}")
+    case "6":
+        x = float(input("Wat is x? Laagste bedrag"))
+        y = float(input("Wat is y? Hoogste bedrag"))
+        answer = (y : x)
         print(f"De vraag is: hoeveel neemt {x} af met {y}?")
         print(f"Het antwoord is: {answer}")
